@@ -20,4 +20,5 @@ add_executable(subtargetsum arrays/11_subsequencestargetsum.cpp)
 add_executable(removedoublestring strings/04_removedoublestring.cpp)
 add_executable(anagrams strings/05_anagrams.cpp)
 add_executable(heappractice strings/06_heappractice.cpp)
+add_executable(heappractice2 strings/07_moreheappractice.cpp)
 

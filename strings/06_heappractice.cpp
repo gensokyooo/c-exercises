@@ -8,29 +8,22 @@ char* replace_spaces (char str[]) {
     while (str[length] != '\0') {
         length++;
     }
-
     char* newstr = new char[length+1];
 
     int count = 0;
     for (int i = 0; i < length; i++) {
-        // We reset condition each index
         bool empty = false;
-        // We check if it's an empty space
         if (str[i] == ' ') {
             empty = true;
         }
-        // If it's not then we add normally
         if (!empty) {
             newstr[count++] = str[i];
         }
-        // If it is then we add an underscore
         if (empty) {
             newstr[count++] = '_';
         }
     }
-
-    // Add the terminator at the end
-    newstr[count] = '\0';
+    newstr[length] = '\0';
 
     return newstr;
 }
@@ -38,7 +31,5 @@ char* replace_spaces (char str[]) {
 int main () {
 
     char str [20] = "Hello World";
-
-
 
 }
