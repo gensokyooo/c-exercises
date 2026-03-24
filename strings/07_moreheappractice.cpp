@@ -1,17 +1,31 @@
 #include <iostream>
 using namespace std;
 
+char* trim (char str[], char c[]) {
 
-char* function (char str[]) {
-    char* str1 = new char [10];
-    str1 = "Hi";
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+        }
+    char* newstr = new char[length+1];
 
-    return str1;
+    int count = 0;
+    for (int i = 0; i < length; i++) {
+        if (str[i] != c[0]) {
+            newstr[count++] = str[i];
+        }
+    }
+
+    newstr[count] = '\0';
+
+
+    return newstr;
 }
+
 
 int main () {
 
-    char str[6] = "Hello";
-    char* result = function (str);
-    cout << result;
+    char str[10] = "Hello";
+    char c [5] = "e";
+
 }
