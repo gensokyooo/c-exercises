@@ -10,18 +10,10 @@ char* revert (char str[]) {
 
     char* newstr = new char [length+1];
 
-    for (int i = 0; i < length/2; i++) {
-        char temp = str[i];
-        str[i] = str[length-1-i];
-        str[length-1-i] = temp;
+    for (int i = 0; i < length; i++) {
+        newstr[i] = str [length - 1 -i];
     }
-
-    for (int j = 0; j < length; j++) {
-        newstr[j] = str[j];
-    }
-
     newstr[length] = '\0';
-
     return newstr;
 
 }

@@ -7,9 +7,8 @@ int countUnique (char str[]) {
     while (str[length] != '\0') {
         length++;
     }
-
-    int uniques = 0;
-    for (int i = 0; i < length; i++) {
+    int unique = 0;
+    for (int i = 0; i < length; i ++) {
         int count = 0;
         for (int j = 0; j < length; j++) {
             if (str[i] == str[j]) {
@@ -17,21 +16,24 @@ int countUnique (char str[]) {
             }
         }
         if (count == 1) {
-            uniques++;
+            unique++;
         }
     }
-    return uniques;
+    return unique;
 }
 
 #define MAX 51
 int main () {
+
     char str[6] = "Hello";
-    char nuova [MAX];
-    cin.getline(nuova,MAX);
+    char a [MAX];
+    cin.getline (a,MAX);
     if (cin.fail()) {
-        cout << "-1";
+        cout << "-1" << endl;
     }
-    int result = countUnique (nuova);
-    cout << result;
+    else {
+        int result = countUnique (a);
+        cout << result;
+    }
 
 }
