@@ -23,5 +23,6 @@ add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
 add_executable(revertpractice strings/09_revertpractice.cpp)
+add_executable(dynamicallocation strings/11_dynamicallocation.cpp)
 
 
