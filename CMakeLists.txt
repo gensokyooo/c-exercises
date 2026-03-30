@@ -25,6 +25,7 @@ add_executable(countunique strings/08_countunique.cpp)
 add_executable(revertpractice strings/09_revertpractice.cpp)
 add_executable(dynamicallocation strings/11_dynamicallocation.cpp)
 add_executable(dynamicallocation2 strings/12_dynamicallocation2.cpp)
+add_executable(removeinvert strings/13_removeinvert.cpp)
 
 
 
