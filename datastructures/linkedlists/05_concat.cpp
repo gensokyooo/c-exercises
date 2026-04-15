@@ -6,16 +6,14 @@ struct node {
     node* next;
 };
 
-//Scrivere una funzione di tipo void di nome concat che, presi come suoi parametri due liste
-// concatenate semplici l1 ed l2 i cui elementi hanno campo informazione di tipo int,
-// concateni la lista l2 alla lista l1. Ad
-// esempio, se l1 = f1,7g e l2 = f5,9,12g, dopo la chiamata alla funzione concat
-// passando come parametri l1 ed l2, la
-// lista l1 diventa f1,7,5,9,12g. Trattare in modo opportuno anche i casi in cui l1
-// e/o l2 siano liste vuote. (+3pt se la
-// funzione `e ricorsiva)
+//Write a void function named concat that takes as parameters two singly linked lists
+//l1 and l2, whose nodes contain an integer information field, and concatenates list l2 to list l1.
+//For example, if l1 = {1, 7} and l2 = {5, 9, 12},
+//after calling concat(l1, l2), list l1 becomes {1, 7, 5, 9, 12}.
+//Properly handle the cases where l1 and/or l2 are empty lists.
 
-// we changin lst1
+
+
 void concat (node*& lst1, node* lst2) {
 
     if (lst1 == nullptr) {
