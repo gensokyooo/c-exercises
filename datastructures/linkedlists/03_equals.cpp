@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
 
-
+struct node {
+    int info;
+    node* next;
+};
 bool equals (node* lst1, node* lst2) {
 
     node* curr = lst1;

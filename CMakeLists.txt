@@ -28,6 +28,7 @@ add_executable(dynamicallocation2 strings/12_dynamicallocation2.cpp)
 add_executable(removeinvert strings/13_removeinvert.cpp)
 add_executable(trim strings/14_trim.cpp)
 add_executable(binarysearch algorithms/01_binarySearch.cpp)
+add_executable(rotatelist datastructures/linkedlists/04_rotate.cpp)
 
 
 
