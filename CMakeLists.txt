@@ -30,6 +30,7 @@ add_executable(trim strings/14_trim.cpp)
 add_executable(binarysearch algorithms/01_binarySearch.cpp)
 add_executable(rotatelist datastructures/linkedlists/04_rotate.cpp)
 add_executable(rotatebacklist datastructures/linkedlists/06_rotateback.cpp)
+add_executable(greaterThanZeroList datastructures/linkedlists/07_greaterThanZero.cpp)
 
 
 
