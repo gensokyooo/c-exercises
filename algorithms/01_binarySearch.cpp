@@ -1,33 +1,31 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int binarySearch(int arr[], int len, int k) {
+int binarySearch (vector <int>& arr, int target) {
+    int left = 0;
+    int right = arr.size() - 1;
 
-    int half = (len-1)/2;
+    while (left <= right) {
+        int mid = (left+right) / 2;
 
-    while (arr[half] == k) {
-        if (arr[half] < k) {
-            half = len-half;
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] > target) {
+            right = mid - 1;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
         }
     }
 
-            // 2 < 5?
-            // we wanna look right
-            // because it's ascending
-            // how do we look right?
-            // we say check within len-half
-            // and now look at the middle
-
-
-
+    return -1;
 
 }
 
 int main () {
-    int arr[] = {1,2,2,3,6};
-    int len = 5;
-    int k = 3;
+    vector <int> arr = {1,2,3,4,6};
+    int target = 2;
 
-    int result = binarySearch(arr,len,k);
-    cout << result;
 }
