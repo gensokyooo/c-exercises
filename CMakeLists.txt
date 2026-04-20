@@ -31,6 +31,7 @@ add_executable(binarysearch algorithms/01_binarySearch.cpp)
 add_executable(rotatelist datastructures/linkedlists/04_rotate.cpp)
 add_executable(rotatebacklist datastructures/linkedlists/06_rotateback.cpp)
 add_executable(greaterThanZeroList datastructures/linkedlists/07_greaterThanZero.cpp)
+add_executable(sumlist datastructures/linkedlists/11_sumlist.cpp)
 
 
 
