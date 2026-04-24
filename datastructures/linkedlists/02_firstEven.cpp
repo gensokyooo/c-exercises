@@ -11,19 +11,16 @@ struct node {
 //element in the list. If the list contains no even elements, return NULL.
 //Appropriately handle the case where lst is empty. (+2pt if the function is recursive).
 
-node* firstEven (node* head) {
-    if (head == nullptr) {
-        return nullptr;
-    }
-    node* curr = head;
-    while (curr != nullptr) {
-        if (curr->info %2 == 1) {
-            curr = curr->next;
-        } else {
-            break;
+node* firstEven (node* lst) {
+
+    while (lst != nullptr) {
+        if (lst->info %2 == 0) {
+            return lst;
         }
+        lst = lst->next;
     }
-    return curr;
+
+    return nullptr;
 }
 
 int main () {
@@ -31,5 +28,5 @@ int main () {
     node* b = new node { 2, c};
     node* a = new node {5, b};
 
-    node* head = a;
+    node* lst = a;
 }
