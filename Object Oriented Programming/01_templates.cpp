@@ -1,79 +1,58 @@
 #include <iostream>
 #include <stdexcept>
-
 using namespace std;
 
 template <typename T>
-
 class Set {
 private:
-    T* elementi[100];
-    int n;
+    T elements[100];
     int capacity;
-
-    void expand () {
-        capacity *= 2;
-        T* nuovo = new T[capacity];
-        for (int i = 0; i < n; i++) {
-            nuovo[i] = this->elementi[i];
-        }
-
-        delete[] this->elementi;
-        this->elementi = nuovo;
-    }
+    int count;
 
 public:
-    Set () {
-        n = 0;
-        capacity = 10;
-        elementi = new T[capacity];
-        }
 
-    ~Set() {
-        delete[] elementi;
+Set () {
+    capacity = 100;
+    count = 0;
+}
+
+
+    void add (T element) {
+    for (int i = 0; i < count; i++) {
+        if (element == elements[i]) {
+            throw runtime_error("Element already present");
+            break;
+        }
     }
 
+    if (count < capacity) {
+        elements[count] = element;
+        count++;
 
-    void add (const T& element)  {
-
-        for (int i = 0; i < n; i++) {
-            if (element == element[i]) {
-                throw runtime_error("Element already present");
-            }
-        }
-
-         if (n == capacity)
-             expand();
-
-        elementi[n] = element;
-        n++;
+    } else if (count >= capacity) {
+        throw runtime_error ("Set is full");
     }
+}
 
-    bool contains (const T& element) {
-        for (int i = 0; i < n; i++) {
-            if (element == element[i]) {
-                return true;
-            }
+    bool contains (T element) {
+    for (int i = 0; i < count; i++) {
+        if (element == elements[i]) {
+            return true;
         }
+    }
         return false;
-    }
+}
 
-    int size () const {
-        return n;
-    }
+    int size () {
+    return count;
+}
 
-    Set operator-(const Set& x) const {
-        Set nuovoSet;
 
-       for (int i = 0; i < n; i++) {
-           if (x.contains(this->elementi[i])) {
-               nuovoSet.add(elementi[i]);
-           }
-       }
-        return nuovoSet;
-    }
+
+
 };
 
 int main () {
+
 
 }
