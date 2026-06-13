@@ -47,8 +47,26 @@ Set () {
     return count;
 }
 
+Set <T> operator-(Set<T>& other) {
+    Set <T> newInsieme;
 
+    for (int i = 0; i < count; i++) {
+            if (other.contains(elements[i])) {
+                newInsieme.add(elements[i]);
+            }
+        }
+return newInsieme;
 
+}
+
+    ostream& operator<< (ostream& fout) {
+    fout << "{" << " ";
+    for (int i = 0; i < count; i++) {
+        fout << elements[i]<< " ";
+    }
+    fout << "}";
+    return fout;
+}
 
 };
 
