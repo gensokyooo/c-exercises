@@ -22,7 +22,9 @@ add_executable(anagrams strings/05_anagrams.cpp
         "Object Oriented Programming/01_templates.cpp"
         "Object Oriented Programming/02_templates.cpp"
         "Object Oriented Programming/03_multiset.cpp"
-        "Object Oriented Programming/Queue.cpp")
+        "Object Oriented Programming/Queue.cpp"
+        "Object Oriented Programming/Insieme.cpp"
+        "Object Oriented Programming/04_Map.cpp")
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
