@@ -38,6 +38,9 @@ public:
             return x;
         }
 
+    int size () {
+        return count;
+    }
 
 
 };
