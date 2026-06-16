@@ -27,7 +27,8 @@ add_executable(anagrams strings/05_anagrams.cpp
         "Object Oriented Programming/04_Map.cpp"
         datastructures/actualdatastructures/01_how_maps_work.cpp
         "Object Oriented Programming/05_Stack.cpp"
-        "Object Oriented Programming/06_MultisetV2.cpp")
+        "Object Oriented Programming/06_MultisetV2.cpp"
+        "Object Oriented Programming/07_RuleOfThreePractice.cpp")
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
