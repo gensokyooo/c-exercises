@@ -48,7 +48,6 @@ public:
     }
 
     void remove (const K& key) {
-
         for (int i = 0; i < count; i ++) {
             if (this->key[i] == key) {
                 for (int j = i; j < count-1; j++) {
@@ -60,6 +59,10 @@ public:
             }
         }
         throw runtime_error ("Chiave non trovata");
+    }
+
+    int size () const {
+        return count;
     }
 };
 
