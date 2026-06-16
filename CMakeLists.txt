@@ -26,7 +26,8 @@ add_executable(anagrams strings/05_anagrams.cpp
         "Object Oriented Programming/Insieme.cpp"
         "Object Oriented Programming/04_Map.cpp"
         datastructures/actualdatastructures/01_how_maps_work.cpp
-        "Object Oriented Programming/05_Stack.cpp")
+        "Object Oriented Programming/05_Stack.cpp"
+        "Object Oriented Programming/06_MultisetV2.cpp")
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
@@ -40,6 +41,8 @@ add_executable(rotatelist datastructures/linkedlists/04_rotate.cpp)
 add_executable(rotatebacklist datastructures/linkedlists/06_rotateback.cpp)
 add_executable(greaterThanZeroList datastructures/linkedlists/07_greaterThanZero.cpp)
 add_executable(sumlist datastructures/linkedlists/11_sumlist.cpp)
+add_executable(multiset "Object Oriented Programming/06_MultisetV2.cpp")
+
 
 
 
