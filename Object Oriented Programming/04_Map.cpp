@@ -23,7 +23,6 @@ public:
                     return;
                 }
             }
-
             if (count < capacity) {
             this->key[count] = key;
             this->value[count] = value;
@@ -31,6 +30,36 @@ public:
         } else {
             throw runtime_error ("Capacity reached");
         }
+    }
+
+    bool contains (const K& key) const {
+        for (int i = 0; i < count; i ++ ) {
+            if (key == this->key[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool isEmpty () const {
+        if (count == 0)
+            return true;
+        return false;
+    }
+
+    void remove (const K& key) {
+
+        for (int i = 0; i < count; i ++) {
+            if (this->key[i] == key) {
+                for (int j = i; j < count-1; j++) {
+                    this->key[j] = this->key[j+1];
+                    this->value[j] = this->value[j+1];
+                }
+                count--;
+                return;
+            }
+        }
+        throw runtime_error ("Chiave non trovata");
     }
 };
 
