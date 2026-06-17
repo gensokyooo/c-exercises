@@ -53,7 +53,7 @@ public:
             }
         }
 
-        *this;
+       return *this;
     }
 
     ~Stack () {
