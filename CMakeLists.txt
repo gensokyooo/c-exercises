@@ -30,7 +30,9 @@ add_executable(anagrams strings/05_anagrams.cpp
         "Object Oriented Programming/06_MultisetV2.cpp"
         "Object Oriented Programming/07_RuleOfThreePractice.cpp"
         "Object Oriented Programming/08_dynamicArrayStackPractice.cpp"
-        "Object Oriented Programming/09_dynamicArrayMultiSetPractice.cpp")
+        "Object Oriented Programming/09_dynamicArrayMultiSetPractice.cpp"
+        "Object Oriented Programming/10_MultisetV3.cpp"
+        "Object Oriented Programming/11_ QueuePractice.cpp")
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
