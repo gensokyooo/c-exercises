@@ -27,9 +27,16 @@ public:
         array = newArray;
         capacity = newCapacity;
     }
+    // Rule of Three: Copy constructor / Assignment operator / Destructor
+
 
 };
 
 int main () {
+
+    Queue <string> x;
+    Queue <string> y = x;
+    // this would essentially do:
+    // y.capacity = x.capacity
 
 }
