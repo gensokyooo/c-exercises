@@ -28,15 +28,37 @@ public:
         capacity = newCapacity;
     }
     // Rule of Three: Copy constructor / Assignment operator / Destructor
+        Queue (const Queue <T>& other) {
+            capacity = other.capacity;
+            count = other.count;
+            array = new T[capacity];
 
+            for (int i = 0; i < count; i ++ ) {
+                array[i] = other.array[i];
+            }
+    }
+    // assignment operator
+    Queue<T>& operator= (const Queue<T>& other) {
+        if (this != &other) {
+            capacity = other.capacity;
+            count = other.count;
+            T* newArray = new T[capacity];
+            for (int i = 0; i < count; i ++) {
+                newArray[i] = other.array[i];
+            }
+            delete[]array;
+            array = newArray;
+        }
+        return *this;
+    }
 
 };
 
 int main () {
 
     Queue <string> x;
-    Queue <string> y = x;
-    // this would essentially do:
-    // y.capacity = x.capacity
+    Queue <string> y;
+    // assignment operator
+    y = x;
 
 }
