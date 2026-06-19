@@ -52,6 +52,36 @@ public:
         return *this;
     }
 
+    void enqueue (const T elem) {
+        if (count >= capacity) {
+            resize();
+        }
+        array[count] = elem;
+        count++;
+    }
+
+    T dequeue (const T elem) {
+        if (count == 0) {
+            throw runtime_error("Empty array");
+        }
+        T x = array[count];
+        count--;
+        return x;
+    }
+
+    bool isEmpty () const {
+        if (count == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    friend ostream& operator<< (ostream& fout, const Queue<T>& other) {
+
+        for (int i = 0; i < other.count; i ++) {
+            fout << other.array[i];
+    }
+
 };
 
 int main () {
