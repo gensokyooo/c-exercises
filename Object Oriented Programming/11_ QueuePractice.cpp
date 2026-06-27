@@ -60,7 +60,7 @@ public:
         count++;
     }
 
-    T dequeue (const T elem) {
+    T dequeue () {
         if (count == 0) {
             throw runtime_error("Empty array");
         }
@@ -76,11 +76,14 @@ public:
         return false;
     }
 
-    friend ostream& operator<< (ostream& fout, const Queue<T>& other) {
 
+    friend ostream& operator<< (ostream& fout, const Queue<T>& other) {
         for (int i = 0; i < other.count; i ++) {
             fout << other.array[i];
+        }
+        return fout;
     }
+
 
 };
 
