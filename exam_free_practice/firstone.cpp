@@ -41,10 +41,46 @@ char* revert (char str[]) {
     newStr[temp] = '\0';
     return newStr;
 }
+struct node {
+    int info;
+    node* next;
+};
 
+node* newlist (node* lst) {
+    node* curr = lst;
+    node* head = nullptr;
+    node* tail = nullptr;
+    while (curr != nullptr) {
+        if (curr->info > 0) {
+            node* newLst = new node {curr->info, nullptr};
+            if (head == nullptr && tail == nullptr) {
+                head = newLst;
+                tail = newLst;
+            } else {
+                tail->next = newLst;
+                tail = newLst;
+            }
+        }
+        curr = curr->next;
+    }
 
+    return head;
+}
+
+#define MAX 51
 int main () {
 
+char stringa[MAX];
+    cin.getline(stringa,MAX);
+    if (cin.fail()) {
+        return -1;
+    }
+    char* result = revert(stringa);
+    cout << result;
+    delete[]result;
 
-
+    node* c = new node {1,nullptr};
+    node* b = new node {1,c};
+    node* a = new node {1,b};
+    node* lst = a;
 }
