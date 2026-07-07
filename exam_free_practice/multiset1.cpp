@@ -17,7 +17,7 @@ public:
 
     void resize () {
         int newCapacity = capacity * 2;
-        T* newElem = new T[capacity];
+        T* newElem = new T[newCapacity];
         for (int i = 0; i < capacity; i++) {
             newElem[i] = elem[i];
         }
@@ -27,15 +27,26 @@ public:
     }
 
     void add (T x) {
-        if (count == 100) {
+        if (count == capacity) {
             resize();
         }
        elem[count] = x;
         count++;
     }
 
-    void remove (T x) {
+    void remove (const T& x) {
 
+        if (count == 0) {
+            throw runtime_error ("The multiset is empty");
+        }
+
+        int newCount = 0;
+        for (int i = 0; i < count; i ++) {
+            if (x != elem[i]) {
+                elem[newCount] = elem[i];
+                newCount++;
+            }
+        }
     }
 
     bool isEmpty () const {
