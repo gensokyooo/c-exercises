@@ -34,7 +34,11 @@ add_executable(anagrams strings/05_anagrams.cpp
         "Object Oriented Programming/10_MultisetV3.cpp"
         "Object Oriented Programming/11_ QueuePractice.cpp"
         exam_free_practice/firstone.cpp
-        exam_free_practice/secondone.cpp)
+        exam_free_practice/secondone.cpp
+        exam_free_practice/palindroma.cpp
+        exam_free_practice/palindroma.h
+        exam_free_practice/palindroma2.cpp
+        exam_free_practice/multiset1.cpp)
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
