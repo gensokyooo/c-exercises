@@ -43,7 +43,9 @@ add_executable(anagrams strings/05_anagrams.cpp
         exam_free_practice/InsiemeFree.cpp
         exam_free_practice/StackFree.cpp
         exam_free_practice/zeroSubs.cpp
-        exam_free_practice/countInversions.cpp)
+        exam_free_practice/countInversions.cpp
+        exam_free_practice/nodepractice.cpp
+        exam_free_practice/nodes2.cpp)
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)

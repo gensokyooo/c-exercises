@@ -57,6 +57,15 @@ char* remove (char* str1, char* str2) {
 
 }
 
+struct node {
+    int info;
+    node* next;
+};
+
+node* merge (node* lst1, node* lst2) {
+
+}
+
 #define MAX 101
 
 int main () {
