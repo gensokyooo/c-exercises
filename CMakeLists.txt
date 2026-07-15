@@ -51,7 +51,11 @@ add_executable(anagrams strings/05_anagrams.cpp
         exam_free_practice/rotatenodes.cpp
         exam_free_practice/boolnodes.cpp
         exam_free_practice/firstEven.cpp
-        exam_free_practice/greaterThanZeroNodes.cpp)
+        exam_free_practice/greaterThanZeroNodes.cpp
+        exam_free_practice/removeduplicatesNode.cpp
+        exam_free_practice/isDescendinNode.cpp
+        "exam_free_practice/multiset practice.cpp"
+        exam_free_practice/insiemepractice.cpp)
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
