@@ -62,7 +62,10 @@ add_executable(anagrams strings/05_anagrams.cpp
         exam_free_practice/novowellz.cpp
         exam_free_practice/exampractice1823.cpp
         exam_free_practice/morepractice.cpp
-        strings/rotatebackshiz.cpp)
+        strings/rotatebackshiz.cpp
+        strings/sum_lists.cpp
+        strings/union.cpp
+        "strings/ Stack.cpp")
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)

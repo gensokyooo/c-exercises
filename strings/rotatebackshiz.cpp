@@ -12,7 +12,7 @@ struct node {
 // poi diventa 2->3->4->5->1
 void rotate_back (node*& lst) {
 
-    if (lst == nullptr) return;
+    if (lst == nullptr || lst->next == nullptr) return;
 
     node* last = lst;
     lst = lst->next;
