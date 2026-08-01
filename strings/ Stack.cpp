@@ -8,30 +8,59 @@ private:
     int capacity;
     int count;
 
-    Stack () {
-        capacity = 100;
-        count = 0;
-        array = new T[capacity];
-    }
-
-    // copy operator
-    Stack (Stack<T>& x) {
-
-        this->capacity = x.capacity;
-        this->count = x.count;
-
-        this->array = new T[capacity];
-        for (int i = 0; i < count; i ++) {
-            array[i] = x.array[i];
+    void resize () {
+        capacity *= 2;
+       T* newArray = new T[capacity];
+        for (int i = 0; i < count; i++) {
+            newArray[i] = array[i];
         }
-        // copy constructor: no checks and no returns
-
-        // assignment operator: checks and returns
-
+        delete[]array;
+        array = newArray;
     }
 
+
+
+
+    void push (T elem) {
+        array[count] = elem;
+        count++;
+    }
+
+    bool isEmpty () const {
+        if (count == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    T pop () {
+        if (isEmpty()) {
+            throw runtime_error ("these nuts");
+        }
+        T elem = array[count-1];
+        count--;
+        return elem;
+    }
+
+    int size () const {
+        return count;
+    }
+
+    T& getElement (int index) const {
+        return array[index];
+    }
 
 };
+// operator <<
+template <typename T>
+ostream& operator<< (ostream& fout,const Stack<T>& other) {
+    fout << "[";
+    for (int i =0 ; i < other.size(); i++) {
+        fout << other.getElement(i) << " , ";
+    }
+    fout << "]";
+    return fout;
+}
 
 int main () {
 
