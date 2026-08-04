@@ -16,8 +16,6 @@ node* sumlists (node* lst1, node* lst2) {
     node* tail = nullptr;
 
 
-
-
     while (curr != nullptr && curr2 != nullptr) {
         int result = curr->info + curr2->info;
 
@@ -33,7 +31,22 @@ node* sumlists (node* lst1, node* lst2) {
         curr2 = curr2->next;
     }
 
+    while (curr2 != nullptr) {
+        node* newNode = new node {curr2->info, nullptr};
 
+        tail->next = newNode;
+        tail = newNode;
+        curr2 = curr2->next;
+    }
+    while (curr != nullptr) {
+        node* newNode = new node {curr->info, nullptr};
+
+        tail->next = newNode;
+        tail = newNode;
+        curr = curr->next;
+    }
+
+    return head;
 
 }
 
