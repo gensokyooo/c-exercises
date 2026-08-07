@@ -68,7 +68,8 @@ add_executable(anagrams strings/05_anagrams.cpp
         "strings/ Stack.cpp"
         strings/shiftleft.cpp
         strings/shiftleft.h
-        strings/interleave.cpp)
+        strings/interleave.cpp
+        strings/hasZeroSum.cpp)
 add_executable(heappractice strings/06_heappractice.cpp)
 add_executable(heappractice2 strings/07_moreheappractice.cpp)
 add_executable(countunique strings/08_countunique.cpp)
