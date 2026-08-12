@@ -43,6 +43,13 @@ newStr[temp] = '\0';
 return newStr;
 }
 
+struct node {
+    int info;
+    node* next;
+};
+
+void concat (node* l1, node* l2)
+
 int main () {
 
 }
