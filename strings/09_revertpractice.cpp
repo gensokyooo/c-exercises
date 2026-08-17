@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
 
+
+struct date {
+    int info;
+};
+
+class Tower {
+public:
+    int height;
+};
+
 char* revert (char str[]) {
 
     int length = 0;
@@ -19,6 +29,12 @@ char* revert (char str[]) {
 }
 
 int main () {
+
+    Tower eiffel;
+    eiffel.height = 32;
+
+    date x;
+    x.info = 32;
 
     char str[6] = "Hello";
     char* result = revert (str);
